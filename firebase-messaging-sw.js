@@ -1,4 +1,4 @@
-/* // Scripts for firebase and firebase messaging
+// Scripts for firebase and firebase messaging
 importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js');
 
@@ -55,7 +55,7 @@ const formatTime = (date) => {
     return formattedToday;
 };
 
-messaging.onBackgroundMessage(function (payload) {
+/* messaging.onBackgroundMessage(function (payload) {
     console.log('Received background message ', payload);
     // Customize notification here
 
@@ -109,5 +109,4 @@ self.addEventListener('notificationclick', function (event) {
                 if (clients.openWindow) return clients.openWindow(urlToRedirect);
             })
     );
-});
- */
+}); */
