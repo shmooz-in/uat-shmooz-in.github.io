@@ -55,38 +55,19 @@ const formatTime = (date) => {
     return formattedToday;
 };
 
-/* messaging.onBackgroundMessage(function (payload) {
+messaging.onBackgroundMessage(function (payload) {
     console.log('Received background message ', payload);
     // Customize notification here
 
-    const type = payload.data.type;
-
-    const { venue_name, from_user_name, start_date, start_time, end_date, end_time, from_user_avatar } = payload.data;
-
-    let notificationTitle = '';
-
-    let body = payload.body;
-
-    switch (type) {
-        case 'venue_booking_request': {
-            notificationTitle = 'Venue Booking Request';
-            const startDate = formatDate(start_date);
-            const startTime = formatTime(`${start_date} ${start_time}`);
-
-            const endDate = formatDate(end_date);
-            const endTime = formatTime(`${end_date} ${end_time}`);
-
-            body = `${from_user_name} has requested booking for Venue (${venue_name}) from ${startDate} ${startTime} to ${endDate} ${endTime}`;
-        }
-    }
-    // = payload.notification.title + 'custom';
+    const notificationTitle = payload.notification.title + 'custom';
     const notificationOptions = {
-        body: body,
-        data: { ...payload.data, url: 'http://localhost:3000/manage/venue-list/' },
-        icon: from_user_avatar
+        body: payload.notification.body
     };
 
-    self.registration.showNotification(notificationTitle, notificationOptions);
+    const fcmChannel = new BroadcastChannel('fcm-channel');
+    fcmChannel.postMessage('test');
+
+    // self.registration.showNotification(notificationTitle, notificationOptions);
 });
 
 ////Code for adding event on click of notification
@@ -109,4 +90,4 @@ self.addEventListener('notificationclick', function (event) {
                 if (clients.openWindow) return clients.openWindow(urlToRedirect);
             })
     );
-}); */
+});
