@@ -1,22 +1,18 @@
 [
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.thesocialhub.shmooz",
-      "sha256_cert_fingerprints": [
-        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
-      ]
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.thesocialhub.shmooz",
+            "sha256_cert_fingerprints": ["FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"]
+        }
+    },
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.thesocialhub.shmooz",
+            "sha256_cert_fingerprints": ["19:0F:05:D7:55:3E:51:CF:30:CE:E6:AB:B3:03:C5:74:07:DB:F0:5E:68:F3:67:41:38:D2:5F:16:02:AC:14:43"]
+        }
     }
-  },
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.thesocialhub.shmooz",
-      "sha256_cert_fingerprints": [
-        "19:0F:05:D7:55:3E:51:CF:30:CE:E6:AB:B3:03:C5:74:07:DB:F0:5E:68:F3:67:41:38:D2:5F:16:02:AC:14:43"
-      ]
-    }
-  }
 ]
