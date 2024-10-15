@@ -56,6 +56,7 @@ const formatTime = (date) => {
 };
 
 messaging.onBackgroundMessage(function (payload) {
+    /// used when backgound message is recived to notify application using fcm channel
     console.log('Received background message ', payload);
     // Customize notification here
 
